@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14181d">
+<meta name="description" content="Photographiez un appareil et retrouvez sa notice officielle.">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ma Brochure">
+<title>Ma Petite Brochure — Retrouvez vos notices</title>
+<style>
+:root{--ink:#14181d;--ink2:#20262e;--paper:#f6f1e4;--line:#e3dac2;--gold:#e8b04b;--muted:#9aa3b1;--green:#6b8f71;--red:#b94b3d}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--ink);color:var(--paper);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,textarea,select{font:inherit}.app{max-width:520px;margin:auto;min-height:100vh;padding:env(safe-area-inset-top) 18px calc(28px + env(safe-area-inset-bottom))}.top{display:flex;align-items:center;gap:12px;padding:20px 2px 14px}.logo{width:42px;height:42px;border-radius:12px;background:var(--gold);display:grid;place-items:center;box-shadow:0 6px 20px #0006}.logo img{width:31px;height:31px}.top h1{font-size:19px;margin:0}.top p{margin:3px 0 0;color:var(--muted);font-size:12px}.status{margin-left:auto;width:10px;height:10px;border-radius:50%;background:var(--muted);box-shadow:0 0 0 4px #ffffff0d}.status.ok{background:#75c989}.status.bad{background:#dc7468}.card{background:var(--ink2);border:1px solid #ffffff10;border-radius:20px;padding:18px;box-shadow:0 14px 35px #0004}.hero h2{font-size:27px;line-height:1.1;margin:2px 0 8px}.hero p{color:var(--muted);line-height:1.5;margin:0 0 18px}.camera{aspect-ratio:4/5;background:#070809;border-radius:18px;overflow:hidden;position:relative;border:1px solid #ffffff12;display:grid;place-items:center}.camera img{width:100%;height:100%;object-fit:cover}.camera.empty:before{content:'📷';font-size:58px}.camera.empty:after{content:'Photographiez l’étiquette ou la façade';position:absolute;bottom:28%;color:var(--muted);font-size:13px}.corn{position:absolute;width:38px;height:38px;border-color:var(--gold);border-style:solid}.tl{top:17px;left:17px;border-width:3px 0 0 3px}.tr{top:17px;right:17px;border-width:3px 3px 0 0}.bl{bottom:17px;left:17px;border-width:0 0 3px 3px}.br{bottom:17px;right:17px;border-width:0 3px 3px 0}.actions{display:grid;gap:10px;margin-top:14px}.btn{border:0;border-radius:13px;padding:15px 16px;font-weight:750;cursor:pointer}.primary{background:var(--gold);color:var(--ink)}.secondary{background:#ffffff0a;color:var(--paper);border:1px solid #ffffff19}.danger{color:#f0a59b}.btn:disabled{opacity:.45}.fine{font-size:11.5px;color:var(--muted);line-height:1.45;text-align:center;margin:12px 8px 0}.section-title{display:flex;justify-content:space-between;align-items:center;margin:25px 2px 10px}.section-title h3{margin:0;font-size:16px}.link{border:0;background:none;color:var(--gold);padding:4px;cursor:pointer}.field{margin-top:12px}.field label{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}.field textarea,.field select{width:100%;border:1px solid #ffffff18;border-radius:12px;background:#11151a;color:var(--paper);padding:13px;outline:none}.field textarea{min-height:82px;resize:vertical}.loader{padding:34px;text-align:center;color:var(--muted)}.spin{width:38px;height:38px;border:3px solid #ffffff16;border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px}@keyframes spin{to{transform:rotate(360deg)}}.result{background:var(--paper);color:#292d32;border-radius:18px;padding:19px;position:relative;overflow:hidden}.badge{display:inline-block;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800;background:#dce8dd;color:#315439}.badge.miss{background:#f1d8d4;color:#7e3027}.result h3{margin:12px 0 4px}.meta{font-size:12px;color:#746d60}.result p{line-height:1.5}.open{display:block;text-align:center;text-decoration:none;background:var(--ink);color:var(--paper);padding:14px;border-radius:11px;font-weight:750;margin-top:14px}.history{display:grid;gap:10px}.history-item{background:var(--ink2);border:1px solid #ffffff0d;border-radius:14px;padding:13px;display:flex;gap:12px;align-items:center}.history-item img{width:55px;height:55px;object-fit:cover;border-radius:10px;background:#111}.history-item strong{display:block;font-size:14px}.history-item small{display:block;color:var(--muted);margin-top:4px}.history-item a{margin-left:auto;color:var(--gold);text-decoration:none;font-size:22px}.empty-history{text-align:center;color:var(--muted);padding:18px}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#050607;color:white;padding:12px 15px;border-radius:11px;max-width:90%;box-shadow:0 10px 30px #0008;z-index:10}.hidden{display:none!important}.footer{text-align:center;margin-top:26px;font-size:11.5px;color:var(--muted)}.footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top"><div class="logo"><img src="/assets/icon.svg" alt=""></div><div><h1>Ma Petite Brochure</h1><p>La vraie notice, à partir d’une photo</p></div><span id="apiStatus" class="status" title="État du service"></span></header>
+
+  <main>
+    <section id="captureView" class="card hero">
+      <h2>Quel est cet appareil&nbsp;?</h2>
+      <p>Photographiez surtout la marque, le modèle ou l’étiquette signalétique.</p>
+      <div id="preview" class="camera empty"><img id="previewImg" class="hidden" alt="Photo sélectionnée"><i class="corn tl"></i><i class="corn tr"></i><i class="corn bl"></i><i class="corn br"></i></div>
+      <input id="cameraInput" type="file" accept="image/*" capture="environment" hidden>
+      <input id="galleryInput" type="file" accept="image/*" hidden>
+      <div class="actions">
+        <button id="cameraBtn" class="btn primary">📷 Prendre une photo</button>
+        <button id="galleryBtn" class="btn secondary">🖼️ Choisir dans la galerie</button>
+        <button id="analyzeBtn" class="btn primary hidden">Analyser l’appareil →</button>
+      </div>
+      <p class="fine">La photo sert uniquement à reconnaître l’appareil. Évitez toute donnée personnelle.</p>
+    </section>
+
+    <section id="workView" class="hidden"></section>
+
+    <div class="section-title"><h3>Mes appareils récents</h3><button id="clearHistory" class="link">Effacer</button></div>
+    <section id="history" class="history"></section>
+  </main>
+
+  <footer class="footer"><a href="/confidentialite.html">Confidentialité</a> · <button id="installBtn" class="link hidden">Installer l’application</button></footer>
+</div>
+<div id="toast" class="toast hidden"></div>
+<script>
+const $ = id => document.getElementById(id);
+const state = { dataUrl:'', imageBase64:'', mediaType:'image/jpeg', description:'', language:'Français', deferredInstall:null };
+const HISTORY_KEY = 'mpb_history_v3';
+
+function toast(message){ $('toast').textContent=message; $('toast').classList.remove('hidden'); setTimeout(()=>$('toast').classList.add('hidden'),3500); }
+function setWork(html){ $('captureView').classList.add('hidden'); $('workView').classList.remove('hidden'); $('workView').innerHTML=html; window.scrollTo({top:0,behavior:'smooth'}); }
+function reset(){ state.dataUrl='';state.imageBase64='';state.description=''; $('previewImg').src='';$('previewImg').classList.add('hidden');$('preview').classList.add('empty');$('analyzeBtn').classList.add('hidden');$('captureView').classList.remove('hidden');$('workView').classList.add('hidden'); }
+
+async function compressImage(file){
+  if(!file.type.startsWith('image/')) throw new Error('Ce fichier n’est pas une image.');
+  const source=await createImageBitmap(file);
+  const max=1600, scale=Math.min(1,max/Math.max(source.width,source.height));
+  const canvas=document.createElement('canvas'); canvas.width=Math.round(source.width*scale); canvas.height=Math.round(source.height*scale);
+  canvas.getContext('2d').drawImage(source,0,0,canvas.width,canvas.height);
+  const dataUrl=canvas.toDataURL('image/jpeg',.82); source.close?.();
+  return {dataUrl,imageBase64:dataUrl.split(',')[1],mediaType:'image/jpeg'};
+}
+
+async function chooseFile(file){
+  try{ Object.assign(state,await compressImage(file)); $('previewImg').src=state.dataUrl;$('previewImg').classList.remove('hidden');$('preview').classList.remove('empty');$('analyzeBtn').classList.remove('hidden'); }
+  catch(e){toast(e.message)}
+}
+$('cameraBtn').onclick=()=>$('cameraInput').click(); $('galleryBtn').onclick=()=>$('galleryInput').click();
+$('cameraInput').onchange=e=>e.target.files[0]&&chooseFile(e.target.files[0]); $('galleryInput').onchange=e=>e.target.files[0]&&chooseFile(e.target.files[0]);
+
+$('analyzeBtn').onclick=async()=>{
+  setWork('<div class="card loader"><div class="spin"></div>Nous lisons la marque et la référence…</div>');
+  try{
+    const r=await fetch('/api/analyze',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({imageBase64:state.imageBase64,mediaType:state.mediaType})});
+    const data=await r.json(); if(!r.ok) throw new Error(data.error||'Analyse impossible.'); state.description=data.description;
+    showConfirm();
+  }catch(e){ state.description=''; showConfirm(e.message); }
+};
+
+function showConfirm(error=''){
+  setWork(`<div class="card"><h2 style="margin-top:0">Appareil reconnu</h2>${error?`<p style="color:#f0a59b">${escapeHtml(error)}</p>`:''}<div class="field"><label>Vérifiez ou corrigez la marque et la référence</label><textarea id="description">${escapeHtml(state.description)}</textarea></div><div class="field"><label>Langue de la notice</label><select id="language"><option>Français</option><option>English</option><option>Español</option><option>Deutsch</option><option>Italiano</option></select></div><div class="actions"><button id="searchBtn" class="btn primary">Rechercher la notice →</button><button id="restartBtn" class="btn secondary">Reprendre une photo</button></div></div>`);
+  $('restartBtn').onclick=reset; $('searchBtn').onclick=searchNotice;
+}
+
+async function searchNotice(){
+  state.description=$('description').value.trim();state.language=$('language').value;if(!state.description)return toast('Indiquez au moins le type ou la référence.');
+  setWork('<div class="card loader"><div class="spin"></div>Recherche de la notice exacte sur le web…</div>');
+  try{
+    const r=await fetch('/api/search',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({description:state.description,language:state.language})});
+    const data=await r.json();if(!r.ok)throw new Error(data.error||'Recherche impossible.');showResult(data);if(data.found)saveHistory(data);
+  }catch(e){setWork(`<div class="card"><p style="color:#f0a59b">${escapeHtml(e.message)}</p><div class="actions"><button id="backBtn" class="btn secondary">Modifier la référence</button><button id="restartBtn" class="btn primary">Nouvel appareil</button></div></div>`);$('backBtn').onclick=showConfirm;$('restartBtn').onclick=reset;}
+}
+
+function showResult(r){
+  const official=r.official?'Source officielle':'Source à vérifier';
+  setWork(`<div class="result"><span class="badge ${r.found?'':'miss'}">${r.found?official:'NOTICE INTROUVABLE'}</span><h3>${escapeHtml(r.product||state.description)}</h3><div class="meta">${escapeHtml([r.manufacturer,r.model].filter(Boolean).join(' · '))}</div><p>${escapeHtml(r.message||'')}</p>${r.found?`<a class="open" href="${escapeAttr(r.sourceUrl)}" target="_blank" rel="noopener">Ouvrir la notice ↗</a><button id="shareBtn" class="btn secondary" style="margin-top:10px">Partager</button>`:''}<button id="restartBtn" class="btn primary" style="margin-top:10px;width:100%">Scanner un autre appareil</button></div>`);
+  $('restartBtn').onclick=reset;
+  if(r.found)$('shareBtn').onclick=async()=>{const share={title:'Notice '+r.product,text:'Notice trouvée avec Ma Petite Brochure',url:r.sourceUrl};if(navigator.share)await navigator.share(share);else{await navigator.clipboard.writeText(r.sourceUrl);toast('Lien copié.')}};
+}
+
+function saveHistory(r){
+  const items=getHistory();items.unshift({product:r.product,url:r.sourceUrl,date:Date.now(),thumb:state.dataUrl.slice(0,350000)});localStorage.setItem(HISTORY_KEY,JSON.stringify(items.slice(0,8)));renderHistory();
+}
+function getHistory(){try{return JSON.parse(localStorage.getItem(HISTORY_KEY)||'[]')}catch{return[]}}
+function renderHistory(){const items=getHistory();$('history').innerHTML=items.length?items.map(x=>`<article class="history-item"><img src="${escapeAttr(x.thumb||'/assets/icon.svg')}" alt=""><div><strong>${escapeHtml(x.product)}</strong><small>${new Date(x.date).toLocaleDateString('fr-FR')}</small></div><a href="${escapeAttr(x.url)}" target="_blank" rel="noopener" aria-label="Ouvrir">↗</a></article>`).join(''):'<div class="empty-history">Aucun appareil enregistré pour le moment.</div>';}
+$('clearHistory').onclick=()=>{if(confirm('Effacer tout l’historique enregistré sur ce téléphone ?')){localStorage.removeItem(HISTORY_KEY);renderHistory();}};
+
+function escapeHtml(v=''){return String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function escapeAttr(v=''){return escapeHtml(v)}
+
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredInstall=e;$('installBtn').classList.remove('hidden')});
+$('installBtn').onclick=async()=>{if(state.deferredInstall){state.deferredInstall.prompt();await state.deferredInstall.userChoice;state.deferredInstall=null;$('installBtn').classList.add('hidden')}};
+if('serviceWorker'in navigator)navigator.serviceWorker.register('/service-worker.js').catch(()=>{});
+fetch('/api/status').then(r=>r.json()).then(x=>$('apiStatus').classList.add(x.ready?'ok':'bad')).catch(()=>$('apiStatus').classList.add('bad'));
+renderHistory();
+</script>
+</body>
+</html>
